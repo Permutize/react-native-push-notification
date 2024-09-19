@@ -64,9 +64,7 @@ public class RNPushNotificationHelper {
     }
 
     public Class getMainActivityClass() {
-        String packageName = context.getPackageName();
-        Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(packageName);
-        String className = launchIntent.getComponent().getClassName();
+       String className = "com.permutize.haha.MainActivity";
         try {
             return Class.forName(className);
         } catch (ClassNotFoundException e) {
@@ -80,9 +78,7 @@ public class RNPushNotificationHelper {
     }
 
     public void invokeApp(Bundle bundle) {
-        String packageName = context.getPackageName();
-        Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(packageName);
-        String className = launchIntent.getComponent().getClassName();
+        String className = "com.permutize.haha.MainActivity";
 
         try {
             Class<?> activityClass = Class.forName(className);
